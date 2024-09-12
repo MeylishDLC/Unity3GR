@@ -15,11 +15,15 @@ namespace Player.Combat
         private CancellationTokenSource stopLifetimeCts = new();
         private void OnEnable()
         {
-            BeginLifetime(stopLifetimeCts.Token).Forget();
+            BeginLifetimeAsync(stopLifetimeCts.Token).Forget();
         }
-
-        private void OnCollisionEnter()
+        private void OnCollisionEnter(Collision other)
         {
+            if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
+            {
+                return;
+            }
+            
             if (stopLifetimeCts != null)
             {
                 stopLifetimeCts.Cancel();
@@ -28,7 +32,7 @@ namespace Player.Combat
             Destroy(gameObject);
         }
 
-        private async UniTask BeginLifetime(CancellationToken token)
+        private async UniTask BeginLifetimeAsync(CancellationToken token)
         {
             await UniTask.Delay(LifetimeMilliseconds, cancellationToken: token);
             Destroy(gameObject);

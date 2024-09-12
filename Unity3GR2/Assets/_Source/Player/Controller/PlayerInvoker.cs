@@ -31,7 +31,7 @@ namespace Player.Controller
 
         public void InvokeShoot()
         {
-            //_playerCombat.Shoot();
+            _playerCombat.Shoot(_player.BulletPrefab, _player.Rb);
         }
     }
 }

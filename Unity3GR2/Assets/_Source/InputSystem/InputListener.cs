@@ -65,12 +65,14 @@ namespace InputSystem
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 _movementDisabled = true;
+                //todo: message in hud
                 Debug.Log("Movement disabled");
             }
 
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                _movementDisabled = false;
+                _movementDisabled = false;                
+                //todo: message in hud
                 Debug.Log("Movement enabled");
             }
         }

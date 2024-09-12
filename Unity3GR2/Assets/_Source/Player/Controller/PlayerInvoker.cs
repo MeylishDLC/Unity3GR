@@ -5,11 +5,9 @@ namespace Player.Controller
 {
     public class PlayerInvoker
     {
-        private PlayerMovement _playerMovement;
-        private PlayerCombat _playerCombat;
-        private Player _player;
-
-        //dependency
+        private readonly PlayerMovement _playerMovement;
+        private readonly PlayerCombat _playerCombat;
+        private readonly Player _player;
         public PlayerInvoker(Player player)
         {
             _playerMovement = new();

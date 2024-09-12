@@ -12,16 +12,8 @@ namespace InputSystem
         {
             _playerInvoker = new PlayerInvoker(player);
         }
-
         void Update()
         {
-            ReadDisableMovement();
-
-            if (_movementDisabled)
-            {
-                return;
-            }
-            
             ReadMovement();
             ReadRotation();
             ReadJump();
@@ -57,23 +49,6 @@ namespace InputSystem
                 {
                     _playerInvoker.InvokeRotate(direction);
                 }
-            }
-        }
-
-        private void ReadDisableMovement()
-        {
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                _movementDisabled = true;
-                //todo: message in hud
-                Debug.Log("Movement disabled");
-            }
-
-            if (Input.GetKeyDown(KeyCode.Mouse0))
-            {
-                _movementDisabled = false;                
-                //todo: message in hud
-                Debug.Log("Movement enabled");
             }
         }
 

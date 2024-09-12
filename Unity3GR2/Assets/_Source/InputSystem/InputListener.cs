@@ -1,7 +1,7 @@
-using _Source.Player.Controller;
+using Player.Controller;
 using UnityEngine;
 
-namespace _Source.Input
+namespace InputSystem
 {
     public class InputListener : MonoBehaviour
     {
@@ -25,11 +25,12 @@ namespace _Source.Input
             ReadMovement();
             ReadRotation();
             ReadJump();
+            ReadShoot();
         }
 
         private void ReadJump()
         {
-            if (UnityEngine.Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 _playerInvoker.InvokeJump();
             }
@@ -37,11 +38,11 @@ namespace _Source.Input
 
         private void ReadMovement()
         {
-            if (UnityEngine.Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.W))
             {
                 _playerInvoker.InvokeMove(Vector3.forward);
             }
-            if (UnityEngine.Input.GetKey(KeyCode.S))
+            if (Input.GetKey(KeyCode.S))
             {
                 _playerInvoker.InvokeMove(Vector3.back);
             }
@@ -49,9 +50,9 @@ namespace _Source.Input
 
         private void ReadRotation()
         {
-            if (UnityEngine.Input.GetKey(KeyCode.D) || UnityEngine.Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
             {
-                var direction = UnityEngine.Input.GetAxis("Horizontal");
+                var direction = Input.GetAxis("Horizontal");
                 if (direction != 0)
                 {
                     _playerInvoker.InvokeRotate(direction);
@@ -61,16 +62,24 @@ namespace _Source.Input
 
         private void ReadDisableMovement()
         {
-            if (UnityEngine.Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.Return))
             {
                 _movementDisabled = true;
                 Debug.Log("Movement disabled");
             }
 
-            if (UnityEngine.Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 _movementDisabled = false;
                 Debug.Log("Movement enabled");
+            }
+        }
+
+        private void ReadShoot()
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                _playerInvoker.InvokeShoot();
             }
         }
     }

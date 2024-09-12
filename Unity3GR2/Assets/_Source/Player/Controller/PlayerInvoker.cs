@@ -1,16 +1,19 @@
-﻿using UnityEngine;
+﻿using Player.Combat;
+using UnityEngine;
 
-namespace _Source.Player.Controller
+namespace Player.Controller
 {
     public class PlayerInvoker
     {
         private PlayerMovement _playerMovement;
+        private PlayerCombat _playerCombat;
         private Player _player;
 
         //dependency
         public PlayerInvoker(Player player)
         {
             _playerMovement = new();
+            _playerCombat = new();
             _player = player;
         }
         public void InvokeJump()
@@ -25,6 +28,10 @@ namespace _Source.Player.Controller
         {
             _playerMovement.Rotate(_player.RotationSpeed, _player.Rb, direction);
         }
-        
+
+        public void InvokeShoot()
+        {
+            //_playerCombat.Shoot();
+        }
     }
 }

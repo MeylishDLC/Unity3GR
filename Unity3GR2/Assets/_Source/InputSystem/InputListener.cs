@@ -1,3 +1,4 @@
+using Core;
 using Player.Controller;
 using UnityEngine;
 
@@ -5,58 +6,22 @@ namespace InputSystem
 {
     public class InputListener : MonoBehaviour
     {
-        [SerializeField] private Player.Player player;
-        private PlayerInvoker _playerInvoker;
-        private bool _movementDisabled;
-        private void Awake()
-        {
-            _playerInvoker = new PlayerInvoker(player);
-        }
-        void Update()
-        {
-            ReadMovement();
-            ReadRotation();
-            ReadJump();
-            ReadShoot();
-        }
+        [SerializeField] private KeyCode exitAppKey;
 
-        private void ReadJump()
+        private Game _game;
+        public void Construct(Game game)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                _playerInvoker.InvokeJump();
-            }
+            _game = game;
         }
-
-        private void ReadMovement()
+        private void Update()
         {
-            if (Input.GetKey(KeyCode.W))
-            {
-                _playerInvoker.InvokeMove(Vector3.forward);
-            }
-            if (Input.GetKey(KeyCode.S))
-            {
-                _playerInvoker.InvokeMove(Vector3.back);
-            }
+            ListenAppExit();
         }
-
-        private void ReadRotation()
+        private void ListenAppExit()
         {
-            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
+            if (Input.GetKeyDown(exitAppKey))
             {
-                var direction = Input.GetAxis("Horizontal");
-                if (direction != 0)
-                {
-                    _playerInvoker.InvokeRotate(direction);
-                }
-            }
-        }
-
-        private void ReadShoot()
-        {
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                _playerInvoker.InvokeShoot();
+                _game.FinishGame();
             }
         }
     }

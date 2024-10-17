@@ -119,8 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79c63eb3fc0845f29c7148ecfacc0fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Speed>k__BackingField: 10
-  <Direction>k__BackingField: {x: 0, y: 0, z: 1}
+  <Speed>k__BackingField: 25
   <LifetimeMilliseconds>k__BackingField: 10000
 --- !u!54 &298366058562693055
 Rigidbody:

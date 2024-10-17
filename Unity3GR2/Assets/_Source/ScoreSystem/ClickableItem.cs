@@ -15,7 +15,6 @@ namespace ScoreSystem
         private void OnMouseDown()
         {
             _score.AddScore(-1);
-            Debug.Log("Clicked!");
         }
     }
 }

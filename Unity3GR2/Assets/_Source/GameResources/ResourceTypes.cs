@@ -2,9 +2,9 @@
 {
     public enum ResourceTypes
     {
-        Weed,
-        Stone,
         Gold,
-        Grass
+        Weed,
+        Grass,
+        Stone,
     }
 }

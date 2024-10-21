@@ -1,6 +1,8 @@
 using System;
+using GameResources;
 using InputSystem;
 using ScoreSystem;
+using UI;
 using UnityEngine;
 
 namespace Core
@@ -10,6 +12,7 @@ namespace Core
         [SerializeField] private InputListener inputListener;
         [SerializeField] private ClickableItem clickableItem;
         [SerializeField] private ScoreView scoreView;
+
         private Game _game;
         private Score _score;
         private void Awake()

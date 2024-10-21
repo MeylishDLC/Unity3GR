@@ -2,8 +2,8 @@
 {
     public class Resource
     {
-        public ResourceTypes Type { get; private set; }
-        public int Amount { get; private set; }
+        public ResourceTypes Type { get; set; }
+        public int Amount { get; set; }
 
         public Resource(ResourceTypes type, int amount)
         {

@@ -17,7 +17,7 @@ namespace Core
             _score = new Score();
             _game = new Game(_score);
             clickableItem.Construct(_score);
-            scoreView.Bind();
+            scoreView.Bind(_score);
             _game.StartGame();
             inputListener.Construct(_game);
         }

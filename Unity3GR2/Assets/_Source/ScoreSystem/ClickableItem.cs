@@ -1,11 +1,11 @@
-﻿using System;
-using System.Security.Cryptography;
+﻿
 using UnityEngine;
 
 namespace ScoreSystem
 {
     public class ClickableItem: MonoBehaviour
     {
+        [SerializeField] private int scoreToAdd;
         private Score _score;
 
         public void Construct(Score score)
@@ -14,7 +14,7 @@ namespace ScoreSystem
         }
         private void OnMouseDown()
         {
-            _score.AddScore(-1);
+            _score.AddScore(scoreToAdd);
         }
     }
 }

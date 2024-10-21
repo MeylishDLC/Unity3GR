@@ -653,7 +653,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputListener: {fileID: 139618310}
-  clickableItem: {fileID: 1806604326}
+  clickableItems:
+  - {fileID: 1806604326}
   scoreView: {fileID: 691428565}
 --- !u!1 &1591734753
 GameObject:
@@ -987,6 +988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed931d6dd7f4abebb7e1d41f515aa31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreToAdd: -1
 --- !u!1 &1978577965
 GameObject:
   m_ObjectHideFlags: 0

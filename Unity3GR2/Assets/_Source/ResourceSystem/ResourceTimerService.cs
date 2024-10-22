@@ -20,7 +20,12 @@ namespace ResourceSystem
                 return _instance;
             }
         }
-
+        public void StopEnableTime(ref CancellationTokenSource tokenSource)
+        {
+            tokenSource.Cancel();
+            tokenSource.Dispose();
+            tokenSource = new CancellationTokenSource();
+        }
         public async UniTask StartEnableTimer(float enabledTime, CancellationToken token)
         {
             try

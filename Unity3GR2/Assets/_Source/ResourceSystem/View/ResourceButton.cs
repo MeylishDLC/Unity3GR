@@ -21,7 +21,7 @@ namespace ResourceSystem.View
         private void Awake()
         {
             _button = GetComponent<Button>();
-            _button.onClick.AddListener(StopEnableTime);
+            _button.onClick.AddListener(StopEnableState);
             GetResourceData();
             ResourceViewService.Instance.SetEnabledIcon(resourceIconImage, resourceType);
         }
@@ -38,11 +38,9 @@ namespace ResourceSystem.View
             _enabledTime = ResourceDataService.Instance.GetEnabledTime(resourceType);
             _disabledTime = ResourceDataService.Instance.GetDisabledTime(resourceType);
         }
-        private void StopEnableTime()
+        private void StopEnableState()
         {
-            _stopEnableTimeCts.Cancel();
-            _stopEnableTimeCts.Dispose();
-            _stopEnableTimeCts = new CancellationTokenSource();
+            ResourceTimerService.Instance.StopEnableTime(ref _stopEnableTimeCts);
         }
         public async UniTask StartResourceCycle(CancellationToken token)
         {

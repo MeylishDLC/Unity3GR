@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using ResourceSystem;
 using ResourceSystem.View;
 using UI;
 using UnityEngine;
@@ -48,17 +49,11 @@ namespace Core
         }
         private void Bind()
         {
-            foreach (var resourceButton in _resourceButtons)
-            {
-                resourceButton.OnResourceDestroyed += EndGame;
-            }
+            ResourceTimerService.Instance.OnResourceDestroyed += EndGame;
         }
         private void UnBind()
         {
-            foreach (var resourceButton in _resourceButtons)
-            {
-                resourceButton.OnResourceDestroyed -= EndGame;
-            }
+            ResourceTimerService.Instance.OnResourceDestroyed -= EndGame;
         }
     }
 }

@@ -4,7 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea19f738-22b2-451d-8fd7-3b865fc7b39b" name="Changes" comment="" />
+    <list default="true" id="ea19f738-22b2-451d-8fd7-3b865fc7b39b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/Core/Game.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/Core/Game.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/ResourceSystem.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/Data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/Data/ResourceData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/Data/ResourceData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/Data/ResourceType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/Data/ResourceType.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/Data/ResourceViewData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/Data/ResourceViewData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/Data/ResourcesDataSO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/Data/ResourcesDataSO.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/Data/ResourcesViewDataSO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/Data/ResourcesViewDataSO.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/ResourceDataService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/ResourceDataService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/ResourceViewService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/ResourceViewService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/View/ResourceButton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/View/ResourceButton.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/UI.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/UI/MainGameUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/UI/MainGameUI.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Unity3GR2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unity3GR2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Presentation/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Presentation/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Support/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Support/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +58,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Singleton-CP",
+    "git-widget-placeholder": "Atomic-Reactor-CP",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -95,6 +122,7 @@
       <workItem from="1729540770884" duration="104000" />
       <workItem from="1729540885312" duration="43000" />
       <workItem from="1729541034696" duration="7282000" />
+      <workItem from="1729605574696" duration="5826000" />
     </task>
     <servers />
   </component>

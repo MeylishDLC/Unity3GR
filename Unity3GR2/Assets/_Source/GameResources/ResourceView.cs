@@ -23,24 +23,29 @@ namespace GameResources
         private void OnAddButtonClick()
         {
             var selectedResourceIndex = resourceDropdown.value;
-            switch (selectedResourceIndex)
+
+            if (CheckIfTypeSupported(selectedResourceIndex))
             {
-                case 0:
-                    TryAddResource(0, GetAddAmountValue());
-                    break;
-                case 1:
-                    TryAddResource((ResourceTypes)1, GetAddAmountValue());
-                    break;
-                case 2:
-                    TryAddResource((ResourceTypes)2, GetAddAmountValue());
-                    break;
-                case 3:
-                    TryAddResource((ResourceTypes)3, GetAddAmountValue());
-                    break;
-                default:
-                    throw new Exception("Unsupported resource type selected.");
+                TryAddResource((ResourceTypes)selectedResourceIndex, GetAddAmountValue());
+            }
+            else
+            {
+                throw new Exception($"Resource type {selectedResourceIndex} is not supported");
             }
             RefreshResourceViewValues();
+        }
+        private bool CheckIfTypeSupported(int typeIndex)
+        {
+            var enumType = typeof(ResourceTypes);
+            var enumValues = Enum.GetValues(enumType);
+            foreach (var value in enumValues)
+            {
+                if ((int)value == typeIndex)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
         private bool TryAddResource(ResourceTypes resourceType, int amountToAdd)
         {

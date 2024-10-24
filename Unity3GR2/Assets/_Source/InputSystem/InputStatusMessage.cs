@@ -27,12 +27,10 @@ namespace InputSystem
             gameObject.SetActive(false);
             _textDisappearCts = new();
         }
-
         private void OnDestroy()
         {
             inputController.OnInputStatusChanged -= ShowMessage;
         }
-
         private void ShowMessage(bool inputEnabled)
         {
             if (gameObject.activeSelf)

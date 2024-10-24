@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea19f738-22b2-451d-8fd7-3b865fc7b39b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/ResourceTimerService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/ResourceTimerService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/Services.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/Services/ResourceLoader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Source/Services/ResourceLoader.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Unity3GR2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unity3GR2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/View/ResourceButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/View/ResourceButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/ResourceDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/ResourceDataService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/ResourceViewService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Source/ResourceSystem/ResourceViewService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,20 +34,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Atomic-Reactor-CP",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Atomic-Reactor-CP&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="F:\Srunity\2022.3.8f1\Editor\Unity.exe" />
@@ -101,6 +103,7 @@
       <workItem from="1729540885312" duration="43000" />
       <workItem from="1729541034696" duration="7282000" />
       <workItem from="1729605574696" duration="8562000" />
+      <workItem from="1729786390299" duration="1193000" />
     </task>
     <servers />
   </component>

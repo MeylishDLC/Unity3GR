@@ -2,6 +2,7 @@ using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using ResourceSystem.Data;
+using Services;
 using UnityEngine;
 
 namespace ResourceSystem
@@ -28,7 +29,15 @@ namespace ResourceSystem
             {
                 if (_resourcesDataSO == null)
                 {
-                    _resourcesDataSO = Resources.Load("ResourcesDataSO") as ResourcesDataSO;
+                    if (ResourceLoader<ResourcesDataSO>.Instance.TryGetResource(typeof(ResourcesDataSO),
+                            out var res))
+                    {
+                        _resourcesDataSO = res;
+                    }
+                    else
+                    {
+                        ResourceLoader<ResourcesDataSO>.Instance.TryLoadResource("ResourcesDataSO", out _resourcesDataSO);
+                    }
                 }
                 return _resourcesDataSO;
             }

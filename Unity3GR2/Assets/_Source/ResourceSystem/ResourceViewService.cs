@@ -1,4 +1,5 @@
 using ResourceSystem.Data;
+using Services;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,14 +22,21 @@ namespace ResourceSystem
         }
 
         private ResourcesViewDataSO _viewData;
-
         private ResourcesViewDataSO ViewDataSo
         {
             get
             {
                 if (_viewData == null)
                 {
-                    _viewData = Resources.Load("ResourcesViewDataSo") as ResourcesViewDataSO;
+                    if (ResourceLoader<ResourcesViewDataSO>.Instance.TryGetResource(typeof(ResourcesViewDataSO),
+                            out var data))
+                    {
+                        _viewData = data;
+                    }
+                    else
+                    {
+                        ResourceLoader<ResourcesViewDataSO>.Instance.TryLoadResource("ResourcesViewDataSo", out _viewData);
+                    }
                 }
                 return _viewData;
             }

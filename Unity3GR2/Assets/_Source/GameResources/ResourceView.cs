@@ -1,11 +1,9 @@
 ﻿using System;
-using GameResources;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-namespace UI
+namespace GameResources
 {
     public class ResourceView: MonoBehaviour
     {

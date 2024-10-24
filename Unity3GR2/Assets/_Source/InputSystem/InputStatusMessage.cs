@@ -1,11 +1,9 @@
-using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using InputSystem;
 using TMPro;
 using UnityEngine;
 
-namespace UI
+namespace InputSystem
 {
     [RequireComponent(typeof(TMP_Text))]
     public class InputStatusMessage : MonoBehaviour

@@ -2,7 +2,6 @@ using System;
 using GameResources;
 using InputSystem;
 using ScoreSystem;
-using UI;
 using UnityEngine;
 
 namespace Core
